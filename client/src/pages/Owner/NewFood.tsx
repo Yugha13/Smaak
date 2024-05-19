@@ -1,5 +1,6 @@
 import BaseUrl from "@/BaseUrl";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
@@ -25,11 +26,11 @@ const NewFood = () => {
     }
   }
   return (
-    <div className="grid">
-        <form onSubmit={HandleForm}>
-            <input type="text" onChange={(e) => setFood(e.target.value )} />
-            <input type="number" onChange={(e) => setPrice(parseFloat(e.target.value) )} />
-            <Button type="submit">Add Food</Button>
+    <div className="w-screen h-screen grid place-items-center">
+        <form onSubmit={HandleForm} className="flex flex-col gap-3 w-96">
+            <Input className="w-[100%]" type="text" onChange={(e) => setFood(e.target.value )} />
+            <Input type="number" onChange={(e) => setPrice(parseFloat(e.target.value) )} />
+            <Button type="submit" variant={"secondary"}>Add Food</Button>
         </form>
     </div>
   )

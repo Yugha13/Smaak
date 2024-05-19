@@ -13,11 +13,11 @@ const FoodPage = () => {
     }, [])
     
   return (
-    <>
+    <div className="grid grid-cols-3">
         {allFood?.map((item:any) => {
             return <FoodCard foodName={item.food} price={item.price}/>
         })}
-    </>
+    </div>
   )
 }
 
