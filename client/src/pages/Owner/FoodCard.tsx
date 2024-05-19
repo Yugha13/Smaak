@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label"
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-export function FoodCard({foodName, price}:{foodName: String, price: any}) {
+export function FoodCard({trigger,reload,foodName, price}:{reload:any,foodName: String, price: any, trigger:any}) {
   const [imgUrl, setImgUrl] = useState("");
   useEffect(() => {
     (async() => {
@@ -29,7 +29,7 @@ export function FoodCard({foodName, price}:{foodName: String, price: any}) {
         
     })()
 
-  }, [])
+  }, [trigger])
   return (
     
     <Card className="w-[350px]">
@@ -50,7 +50,7 @@ export function FoodCard({foodName, price}:{foodName: String, price: any}) {
         </form>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <EditBtn/>
+        <EditBtn reload={reload} trigger={trigger} name={foodName}/>
         <Button>Delete</Button>
       </CardFooter>
     </Card>

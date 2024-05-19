@@ -8,7 +8,8 @@ const router = Router();
 // name => foodName
 
 router.post("/addFood", async( req, res ) => {
-    const { name, price } = req.body;
+    let { name, price } = req.body;
+    price = parseFloat(price);
     //console.log(name, price);
     const already = await Prisma.food.findFirst({
         where: {
@@ -29,7 +30,8 @@ router.post("/addFood", async( req, res ) => {
 })
 
 router.post("/editFood", async( req, res ) => {
-    const { name, price } = req.body;
+    let { name, price } = req.body;
+    price = parseFloat(price);
     const alreadyExist = await Prisma.food.findFirst({
         where: {
             name

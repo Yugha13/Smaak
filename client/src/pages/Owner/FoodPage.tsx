@@ -4,18 +4,19 @@ import axios from "axios"
 import BaseUrl from "@/BaseUrl"
 
 const FoodPage = () => {
+    const [trigger, reload] = useState(false); 
     const [allFood, setAllFood] = useState([]);
     useEffect(() =>{
         (async() => {
             const res = await axios.get(`${BaseUrl}/allFood`);
             setAllFood(res.data);
         })()
-    }, [])
+    }, [trigger])
     
   return (
     <div className="grid grid-cols-3">
         {allFood?.map((item:any) => {
-            return <FoodCard foodName={item.food} price={item.price}/>
+            return <FoodCard trigger={trigger} reload={reload} foodName={item.food} price={item.price}/>
         })}
     </div>
   )
