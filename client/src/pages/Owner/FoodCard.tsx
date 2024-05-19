@@ -1,6 +1,5 @@
 import BaseUrl from "@/BaseUrl"
 import { EditBtn } from "./EditBtn"
-import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -43,7 +42,7 @@ export function FoodCard({trigger,reload,foodName, price}:{reload:any,foodName: 
     <Card className="w-[350px]">
       <CardHeader>
         <CardTitle className="w-[100%] grid place-items-center ">BreakFast</CardTitle>
-        <img className="object-cover h-48 w-96" src={imgUrl}/>
+        <img className="object-cover h-48 w-96 rounded-md" src={imgUrl}/>
       </CardHeader>
       <CardContent>
         <form>
