@@ -1,3 +1,4 @@
+import BaseUrl from "@/BaseUrl"
 import { EditBtn } from "./EditBtn"
 import { Button } from "@/components/ui/button"
 import {
@@ -10,6 +11,7 @@ import {
 import { Label } from "@/components/ui/label"
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Alert } from "./Alert"
 
 export function FoodCard({trigger,reload,foodName, price}:{reload:any,foodName: String, price: any, trigger:any}) {
   const [imgUrl, setImgUrl] = useState("");
@@ -31,7 +33,11 @@ export function FoodCard({trigger,reload,foodName, price}:{reload:any,foodName: 
         
     })()
 
-  }, [trigger])
+  }, [trigger]);
+  const deleteFood = async() => {
+    const res = axios.post(`${BaseUrl}/deleteFood`, {name: foodName});
+    reload(!trigger)
+  }
   return (
     
     <Card className="w-[350px]">
@@ -53,7 +59,7 @@ export function FoodCard({trigger,reload,foodName, price}:{reload:any,foodName: 
       </CardContent>
       <CardFooter className="flex justify-between">
         <EditBtn reload={reload} trigger={trigger} name={foodName}/>
-        <Button>Delete</Button>
+        <Alert deleteFood={deleteFood}></Alert>
       </CardFooter>
     </Card>
   )
