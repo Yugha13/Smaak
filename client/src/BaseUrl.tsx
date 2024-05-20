@@ -1,1 +1,1 @@
-export default "http://localhost:5002/food"
+export default "http://192.168.16.238:5002/food"
