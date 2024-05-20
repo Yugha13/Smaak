@@ -17,7 +17,7 @@ router.post("/addFood", async( req, res ) => {
         }
     })
     //console.log(already);
-    if(already) return res.json({message: "food already exists"});
+    if(already) return res.json({message: "food already exists", isExist: true});
 
     const newFood = await Prisma.food.create({
         data:{

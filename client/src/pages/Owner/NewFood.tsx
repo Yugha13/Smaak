@@ -17,8 +17,14 @@ const NewFood = () => {
         const res = await axios.post(`${BaseUrl}/addFood`, {name: food, price});
         console.log(res);
         toast("food created", {
-            description: `food create with name ${res.data.message}`,
+            description: `${res.data.message}`,
         })
+        if(res.data.isExist){
+          toast("Food Not Added ❌", {
+            description: "Already food exist in menu"
+          })
+          return 0;
+        }
         Navi("/foods")
     } catch(e) {
         console.log(e);
@@ -26,7 +32,7 @@ const NewFood = () => {
     }
   }
   return (
-    <div className="w-screen h-screen grid place-items-center">
+    <div className="w-[100%] h-screen grid place-items-center">
         <form onSubmit={HandleForm} className="flex flex-col gap-3 w-96">
             <Input className="w-[100%]" type="text" onChange={(e) => setFood(e.target.value )} />
             <Input type="number" onChange={(e) => setPrice(parseFloat(e.target.value) )} />

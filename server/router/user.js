@@ -1,4 +1,4 @@
-const { Router } = requiree("express");
+const { Router } = require("express");
 const { PrismaClient } = require("@prisma/client");
 
 
