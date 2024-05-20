@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,41 +19,20 @@ function Navbar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="/addFood"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Dashboard
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    Add Food
+                  </Link>
+                  <Button
+                    variant={"destructive"}
+                    className= "text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Team
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Projects
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Calendar
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Reports
-                  </a>
+                    Logout
+                  </Button>
                 </div>
+                
               </div>
             </div>
             <div className="-mr-2 flex md:hidden">

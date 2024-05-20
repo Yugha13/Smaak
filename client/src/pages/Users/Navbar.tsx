@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,40 +19,24 @@ function Navbar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    user
-                  </a>
+                    View History
+                  </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Team
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    See Whats new
+                  </Link>
+                  <Button
+                    variant={"destructive"}
                   >
-                    Projects
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Calendar
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Reports
-                  </a>
+                    logout
+                  </Button>
                 </div>
               </div>
             </div>

@@ -1,11 +1,9 @@
-import {NextUIProvider} from "@nextui-org/react";
-import OwnerPage from "./pages/Owner/OwnerPage";
-import UserPage from "./pages/Users/UserPage";
+import { NextUIProvider } from "@nextui-org/react";
+import Private from "./Private";
 const App = () => {
-  const isOwner = true;
   return (
     <NextUIProvider>
-      {isOwner?<OwnerPage/>:<UserPage/>}
+      <Private/>
     </NextUIProvider>
   )
 }
