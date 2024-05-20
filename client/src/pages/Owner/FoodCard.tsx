@@ -38,7 +38,6 @@ export function FoodCard({trigger,reload,foodName, price}:{reload:any,foodName: 
     reload(!trigger)
   }
   return (
-    
     <Card className="w-[350px]">
       <CardHeader>
         <CardTitle className="w-[100%] grid place-items-center ">BreakFast</CardTitle>

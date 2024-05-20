@@ -38,7 +38,7 @@ export default function MenuCard({foodName, price}:{foodName: String, price: any
     </CardHeader>
     <CardFooter className="flex justify-between ">
       <div>{foodName}</div>
-      <div>${price}</div>
+      <div>Price: ${price}</div>
     </CardFooter>
   </Card>
   );
