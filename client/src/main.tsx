@@ -6,9 +6,11 @@ import { BrowserRouter } from "react-router-dom"
 import { Toaster } from "@/components/ui/sonner"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <ThemeProvider>
+  <ThemeProvider >
     <BrowserRouter>
+    <div >
       <App />
+    </div>
       <Toaster></Toaster>
     </BrowserRouter>
   </ThemeProvider>
