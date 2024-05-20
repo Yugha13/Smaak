@@ -1,14 +1,14 @@
 import FoodPage from "./pages/Owner/FoodPage"
 import NewFood from "./pages/Owner/NewFood"
 import { Route, Routes } from "react-router-dom"
-import { NabBar } from "./components/common/Navbar"
+import  Navbar  from "./components/common/Navbar"
 import {NextUIProvider} from "@nextui-org/react";
 import MenuPage from "./pages/Users/MenuPage";
 
 const App = () => {
   return (
     <NextUIProvider>
-      <NabBar/>
+      <Navbar/>
       <div className="grid gap-10 h-screen place-items-center mt-10">
       <Routes>
         <Route path="/foods" element={<FoodPage/>}/>
