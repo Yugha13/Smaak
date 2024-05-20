@@ -21,8 +21,6 @@ export default function MenuCard({foodName, price}:{foodName: String, price: any
           const random = parseInt((Math.random() * 10) as any);
           setImgUrl(res.data.hits[random].largeImageURL)
         }
-        
-        
     })()
 
   }, []);
