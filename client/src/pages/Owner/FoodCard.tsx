@@ -18,7 +18,7 @@ export function FoodCard({trigger,reload,foodName, price}:{reload:any,foodName: 
     console.log(name);
     (async() => {
         let custom = foodName.split(' ').join('+');
-        const res:any = await axios.get(`https://pixabay.com/api/?key=25058500-660038d575a6cd187ab65ae0c&q=${custom}&image_type=photo&pretty=true`);
+        const res:any = await axios.get(`https://pixabay.com/api/?key=25058500-660038d575a6cd187ab65ae0c&q=${custom}+food&image_type=photo&pretty=true`);
         const random = parseInt((Math.random() * 30) as any);
         console.log(random);
         try{

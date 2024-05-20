@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgres"
-  url      = "postgres://ashwin:root@localhost:5432/sample1"
+  url      = env("DATABASE_URL")
 }
 
 model Food {

@@ -1,11 +1,8 @@
-import { CardContent, CardTitle } from "@/components/ui/card";
-import {Card, CardBody, CardFooter, CardHeader, Image} from "@nextui-org/react";
-import { Label } from "@radix-ui/react-label";
+
+import {Card, CardFooter, CardHeader} from "@nextui-org/react";
 
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { EditBtn } from "../Owner/EditBtn";
-import { Alert } from "../Owner/Alert";
 
 
 
