@@ -13,7 +13,7 @@ const MenuPage = () => {
     }, []);
     
   return (
-    <div className="grid grid-cols-1 gap-9 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-1 gap-9 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10">
         {allFood?.map((item:any) => {
             return <MenuCard foodName={item.food} price={item.price}/>
         })}

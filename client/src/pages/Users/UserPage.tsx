@@ -6,7 +6,7 @@ const UserPage = () => {
   return (
     <>
     <Navbar/>
-    <div className="grid gap-10 h-screen place-items-center mt-10">
+    <div>
     <Routes>
         <Route path="/foods" element={<MenuPage/>}/>
     </Routes>
