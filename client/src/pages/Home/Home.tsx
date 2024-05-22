@@ -7,7 +7,7 @@ export function Home() {
   return (
     <div className="w-[100%] ">
     
-        <div className="h-96 relative overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg h-screen ">
+        <div className="relative overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg h-screen ">
             <div className="overflow-hidden">
                 <Boxes />
             </div>
@@ -35,5 +35,5 @@ export function Home() {
       <ContentBox/>
       
     </div>
-  );
+  )
 }
