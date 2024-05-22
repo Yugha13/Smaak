@@ -1,6 +1,7 @@
 
 import { ContentBox } from "./ContentBox";
 import { Boxes } from "@/components/ui/background-boxes";
+import Open from "@/Foodies Soup Kitchen.png"
 
 export function Home() {
   return (
@@ -11,7 +12,10 @@ export function Home() {
                 <Boxes />
             </div>
     <div className="h-[40rem] w-fit  flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
+      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20 flex">
+        <img src={Open} alt=''/>
+      </h1>
+      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20 flex">
         SMAAK
       </h1>
       <div className="w-[40rem] h-fit relative">
